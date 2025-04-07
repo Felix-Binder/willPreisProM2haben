@@ -51,5 +51,10 @@ $ npm run lint         # Run ESLint
 $ npm run format       # Format code with Prettier
 ```
 
+## 💡 Feedback
+
+📣 You have a great idea or found a bug?  
+👉 [Create a GitHub-Issue](https://github.com/Felix-Binder/willPreisProM2haben/issues)
+
 ## License
 [MIT](./LICENSE) © 2025 Felix Binder
