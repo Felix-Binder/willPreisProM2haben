@@ -53,7 +53,7 @@ export function extractAndInsertPricePerM2onSingleView() {
     if (price && area && pricePerM2 !== null) {
         const badge = document.createElement('div');
         badge.textContent = `€ ${pricePerM2}/m²`;
-        badge.className = 'willpreisprom2haben-badge';
+        badge.className = 'willpreisprom2haben-badge-single-view';
         priceElement.parentElement.appendChild(badge);
     }
 }

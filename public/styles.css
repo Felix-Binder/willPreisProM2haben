@@ -1,4 +1,4 @@
-.willpreisprom2haben-badge {
+.willpreisprom2haben-badge-list-view {
     background: #005aa7;
     font-weight: bold;
     color: white;
@@ -8,4 +8,14 @@
     position: absolute;
     bottom: 50px;
     right: 15px;
+}
+
+.willpreisprom2haben-badge-single-view {
+    background: #005aa7;
+    font-weight: bold;
+    color: white;
+    padding: 4px 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin: 10px 0;
 }
