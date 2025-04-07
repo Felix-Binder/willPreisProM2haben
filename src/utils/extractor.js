@@ -36,7 +36,7 @@ export function extractAndInsertPricePerM2onListingsView() {
     });
 }
 
-export function extractAndInsertPricePerM2onSingleView() {
+export function extractAndInsertPricePerM2onDetailView() {
     const priceElement = document.querySelector(
         '[data-testid^="contact-box-price-box-price-value-"]',
     );

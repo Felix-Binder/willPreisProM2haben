@@ -1,6 +1,6 @@
 import {
     extractAndInsertPricePerM2onListingsView,
-    extractAndInsertPricePerM2onSingleView,
+    extractAndInsertPricePerM2onDetailView,
 } from './utils/extractor';
 
 export function startObservingListings() {
@@ -26,14 +26,14 @@ function debounceProcess() {
     debounceTimeout = setTimeout(extractAndInsertPricePerM2onListingsView, 500);
 }
 
-function isSingleView() {
+function isDetailView() {
     return window.location.pathname.includes('/d/');
 }
 
 window.addEventListener('load', () => {
     setTimeout(() => {
-        if (isSingleView()) {
-            extractAndInsertPricePerM2onSingleView();
+        if (isDetailView()) {
+            extractAndInsertPricePerM2onDetailView();
         } else {
             startObservingListings();
         }
