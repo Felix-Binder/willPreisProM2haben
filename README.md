@@ -4,22 +4,27 @@
 ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
 [![Version](https://img.shields.io/github/package-json/v/Felix-Binder/willPreisProM2haben)](package.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+![Manifest Version](https://img.shields.io/badge/manifest-v3-blue)
 
-A super lightweight Browser Extension that adds a badge for the **price per square meter** directly on [willhaben.at](https://www.willhaben.at) real estate listings.
+
+A super lightweight Browser Extension that adds a badge for the missing **price per square meter** attribute directly on [willhaben.at](https://www.willhaben.at) real estate listings.
 
 ## ✨ Features
 
 - 🏡 Shows €/m² directly on all willhaben.at listings
 - 🧠 Auto-calculates from existing DOM data (price + area)
-- 🧼 Super lightweight, no settings or storage
-- 🔍 Works on object and listing views
+- 🚀 Lightweight, no settings or storage
+- 🔍 Works on detail and listing views
+- 🌍 Works on Chrome **and** Firefox
 - 🔒 Open Source & non-commercial
 
 ## 🧩 Compatibility
 
-- ✅ **Chrome** (ab Manifest v3, getestet auf Desktop)
+- ✅ **Chrome**
+  - Compatible with Chrome (Manifest V3)
   - Publication planned in the Chrome Web Store
 - 🦊 **Firefox** 
+  - Compatible with Firefox (Manifest V3)
   - Adaptations for AMO compatibility in preparation
 
 ## 🚀 Installation (Development)
@@ -29,12 +34,22 @@ $ npm install
 $ npm run dev
 ```
 
-Then load the `dist/` folder as an unpacked extension in Chrome with the "Development mode" enabled.
+This will rebuild the extension in the `dist/` folder whenever files in the `src/` directory change or are saved during development.
 
+To test the extension in your browser, follow these steps:
+
+**Chrome**
 1. open `chrome://extensions/`
 2. activate "Development mode"
 3. click on "Load unpackged"
 4. choose the `dist/` directory
+
+**Firefox**
+1. open `about:debugging`
+2. go to "This Firefox" tab
+3. "Load Temporary Add-on..."
+4. choose the `dist/manifest.json` file
+
 
 ### 🧰 Tech Stack
 
@@ -42,7 +57,7 @@ Then load the `dist/` folder as an unpacked extension in Chrome with the "Develo
 - Vitest + jsdom
 - ESLint + Prettier
 - semantic-release
-- Chrome Extension Manifest V3
+- Manifest V3
 
 ### 🧪 Run Tests & Lint
 ```
@@ -56,5 +71,5 @@ $ npm run format       # Format code with Prettier
 📣 You have a great idea or found a bug?  
 👉 [Create a GitHub-Issue](https://github.com/Felix-Binder/willPreisProM2haben/issues)
 
-## License
+## ⚖️ License
 [MIT](./LICENSE) © 2025 Felix Binder
