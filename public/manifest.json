@@ -8,6 +8,8 @@
     "48": "icon-128x128.png",
     "128": "icon-128x128.png"
   },
+  "permissions": [],
+  "host_permissions": ["*://www.willhaben.at/iad/immobilien/*"],
   "content_scripts": [
     {
       "matches": [
