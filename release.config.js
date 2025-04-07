@@ -31,7 +31,7 @@ export default {
                 assets: [
                     {
                         path: 'release/willPreisProM2haben-v*.zip',
-                        label: 'Chrome Extension ZIP',
+                        label: 'Extension ZIP',
                     },
                 ],
             },
