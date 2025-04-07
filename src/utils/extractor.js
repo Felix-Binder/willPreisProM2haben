@@ -7,6 +7,10 @@ export function extractAndInsertPricePerM2onListingsView() {
     );
 
     listings.forEach((item) => {
+        console.log(
+            '[willPreisProM2haben] ⚙️ Extracting and calculating price per square meter...',
+        );
+
         const priceElement = item.querySelector('[data-testid^="search-result-entry-price-"]');
         const attributeElements = item.querySelectorAll(
             '[data-testid^="search-result-entry-teaser-attributes"]',
@@ -21,6 +25,8 @@ export function extractAndInsertPricePerM2onListingsView() {
             }
         });
 
+        console.debug('[willPreisProM2haben] 🐞 Extracted values:', price, area);
+
         const pricePerM2 = calcPricePerM2(price, area);
 
         if (price && area && pricePerM2 !== null) {
@@ -31,12 +37,18 @@ export function extractAndInsertPricePerM2onListingsView() {
                 badge.className = 'willpreisprom2haben-badge-list-view';
                 priceElement.parentElement.appendChild(badge);
                 item.setAttribute('data-willpreisprom2haben-processed', 'true');
+                console.log(
+                    '[willPreisProM2haben] ✅ Created price per square meter Badge:',
+                    pricePerM2,
+                );
             }
         }
     });
 }
 
 export function extractAndInsertPricePerM2onDetailView() {
+    console.log('[willPreisProM2haben] ⚙️ Extracting and calculating price per square meter...');
+
     const priceElement = document.querySelector(
         '[data-testid^="contact-box-price-box-price-value-"]',
     );
@@ -52,6 +64,8 @@ export function extractAndInsertPricePerM2onDetailView() {
         }
     });
 
+    console.debug('[willPreisProM2haben] 🐞 Extracted values:', price, area);
+
     const pricePerM2 = calcPricePerM2(price, area);
 
     if (price && area && pricePerM2 !== null) {
@@ -59,5 +73,6 @@ export function extractAndInsertPricePerM2onDetailView() {
         badge.textContent = `€ ${pricePerM2}/m²`;
         badge.className = 'willpreisprom2haben-badge-detail-view';
         priceElement.parentElement.appendChild(badge);
+        console.log('[willPreisProM2haben] ✅ Created price per square meter Badge:', pricePerM2);
     }
 }

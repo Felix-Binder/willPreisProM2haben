@@ -31,6 +31,7 @@ function isDetailView() {
 }
 
 window.addEventListener('load', () => {
+    console.log('[willPreisProM2haben] 🔎 View type:', isDetailView() ? 'Detail' : 'Listings');
     setTimeout(() => {
         if (isDetailView()) {
             extractAndInsertPricePerM2onDetailView();
