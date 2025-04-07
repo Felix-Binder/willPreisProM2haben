@@ -1,0 +1,49 @@
+{
+  "name": "willpreisprom2haben",
+  "version": "1.0.0",
+  "description": "A lightweight Chrome Extension to show price per m² on willhaben.at",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .js",
+    "format": "prettier --write \"src/**/*.js\"",
+    "format:check": "prettier --check \"src/**/*.js\"",
+    "script:update-version": "node scripts/update-manifest-version.js",
+    "script:zip-dist": "node scripts/zip-dist.js",
+    "release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Felix-Binder/willPreisProM2haben.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Felix-Binder/willPreisProM2haben/issues"
+  },
+  "homepage": "https://github.com/Felix-Binder/willPreisProM2haben#readme",
+  "dependencies": {
+    "vite": "^6.2.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^7.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@vitest/coverage-v8": "^3.1.1",
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.6",
+    "globals": "^16.0.0",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.5.3",
+    "semantic-release": "^24.2.3",
+    "semantic-release-license": "^1.0.3",
+    "vitest": "^3.1.1",
+    "zip-a-folder": "^3.1.9"
+  },
+  "type": "module"
+}
