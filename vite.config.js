@@ -18,13 +18,8 @@ export default defineConfig({
         environment: 'jsdom',
         coverage: {
             provider: 'v8',
-            exclude: [
-                '**/node_modules/**',
-                '**/dist/**',
-                '**/release.config.js',
-                '**/vite.config.js',
-                'src/contentScript.js',
-            ],
+            include: ['src/**'],
+            exclude: ['src/contentScript.js'],
         },
     },
     publicDir: 'public',
