@@ -1,7 +1,7 @@
 import { describe, beforeEach, it, expect } from 'vitest';
 import { extractAndInsertPricePerM2onListingsView } from '../src/utils/extractor';
 
-describe('extractAndInsertPricePerM2onSingleView', () => {
+describe('extractAndInsertPricePerM2onListingsView', () => {
     beforeEach(() => {
         document.body.innerHTML = `
       <div data-testid="search-result-entry-header-0">
@@ -16,8 +16,7 @@ describe('extractAndInsertPricePerM2onSingleView', () => {
 
     it('inserts correct €/m² badge', () => {
         extractAndInsertPricePerM2onListingsView();
-
-        const badge = document.querySelector('.willpreisprom2haben-badge');
+        const badge = document.querySelector('.willpreisprom2haben-badge-list-view');
         expect(badge).toBeTruthy();
         expect(badge.textContent).toBe('€ 2000/m²');
     });
@@ -25,7 +24,7 @@ describe('extractAndInsertPricePerM2onSingleView', () => {
     it('does not insert badge if price is missing', () => {
         document.querySelector('[data-testid="search-result-entry-price-0"]').remove();
         extractAndInsertPricePerM2onListingsView();
-        expect(document.querySelector('.willpreisprom2haben-badge')).toBeNull();
+        expect(document.querySelector('.willpreisprom2haben-badge-list-view')).toBeNull();
     });
 
     it('does not insert badge if area is invalid', () => {
@@ -33,6 +32,6 @@ describe('extractAndInsertPricePerM2onSingleView', () => {
             '[data-testid="search-result-entry-teaser-attributes"]',
         ).textContent = 'NaN';
         extractAndInsertPricePerM2onListingsView();
-        expect(document.querySelector('.willpreisprom2haben-badge')).toBeNull();
+        expect(document.querySelector('.willpreisprom2haben-badge-list-view')).toBeNull();
     });
 });
