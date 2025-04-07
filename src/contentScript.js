@@ -30,13 +30,16 @@ function isDetailView() {
     return window.location.pathname.includes('/d/');
 }
 
-window.addEventListener('load', () => {
-    console.log('[willPreisProM2haben] 🔎 View type:', isDetailView() ? 'Detail' : 'Listings');
-    setTimeout(() => {
-        if (isDetailView()) {
-            extractAndInsertPricePerM2onDetailView();
-        } else {
-            startObservingListings();
-        }
-    }, 1000);
-});
+function init() {
+    if (isDetailView()) {
+        extractAndInsertPricePerM2onDetailView();
+    } else {
+        startObservingListings();
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    init();
+}
