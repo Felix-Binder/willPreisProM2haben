@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Felix-Binder/willPreisProM2haben/compare/v1.1.0...v1.2.0) (2025-04-13)
+
+
+### Features
+
+* add new icons ([7e7268c](https://github.com/Felix-Binder/willPreisProM2haben/commit/7e7268c579f03b625d34bf856c601446067b23c7))
+
 # [1.1.0](https://github.com/Felix-Binder/willPreisProM2haben/compare/v1.0.0...v1.1.0) (2025-04-07)
 
 

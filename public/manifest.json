@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "willPreisProM2haben",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Shows price per square meter directly on willhaben.at listings.",
   "icons": {
     "16": "icon-16x16.png",
