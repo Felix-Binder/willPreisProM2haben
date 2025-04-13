@@ -51,7 +51,7 @@ To test the extension in your browser, follow these steps:
 4. choose the `dist/manifest.json` file
 
 
-### 🧰 Tech Stack
+## 🧰 Tech Stack
 
 - Vite
 - Vitest + jsdom
@@ -59,16 +59,16 @@ To test the extension in your browser, follow these steps:
 - semantic-release
 - Manifest V3
 
-### 🧪 Run Tests & Lint
+## 🧪 Run Tests & Lint
 ```
 $ npm run test         # Run unit and integration tests
 $ npm run lint         # Run ESLint
 $ npm run format       # Format code with Prettier
 ```
 
-## 💡 Feedback
+## 📣 Feedback
 
-📣 You have a great idea or found a bug?  
+You have a great idea or found a bug?  
 👉 [Create a GitHub-Issue](https://github.com/Felix-Binder/willPreisProM2haben/issues)
 
 ## ⚖️ License
