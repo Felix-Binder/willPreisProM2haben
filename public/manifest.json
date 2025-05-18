@@ -9,6 +9,11 @@
     "48": "icon-48x48.png",
     "128": "icon-128x128.png"
   },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "willpreisprom2haben@felixbinder.at"
+    }
+  },
   "permissions": [],
   "host_permissions": [
     "*://www.willhaben.at/iad/immobilien/*"
